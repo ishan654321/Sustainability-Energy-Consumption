@@ -10,7 +10,7 @@ from datetime import datetime
 
 def forcasting():
     st.title('Hourly Energy Consumption Forecasting')
-    df = pd.read_csv('D:\Sustanability Project\DEOK_hourly.csv\DEOK_hourly.csv', index_col='Datetime')
+    df = pd.read_csv('DEOK_hourly.csv\DEOK_hourly.csv', index_col='Datetime')
 
     df.index = pd.to_datetime(df.index)
     df['date'] = df.index
