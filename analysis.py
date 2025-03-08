@@ -4,7 +4,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 def analysis():
-    df = pd.read_csv('DEOK_hourly.csv\DEOK_hourly.csv', index_col='Datetime')
+    df = pd.read_csv('DEOK_hourly.csv', index_col='Datetime')
 
     df.index = pd.to_datetime(df.index)
     df['date'] = df.index
