@@ -2,18 +2,18 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 import plotly.graph_objects as go
-wind_df=pd.read_csv('D:\Sustanability Project\wind_share_energy.csv')
+wind_df=pd.read_csv('wind_share_energy.csv')
 wind_df.drop('Code',axis=1,inplace=True)
 wind_df.rename(columns={'Entity':'Country'},inplace=True)
 wind_df['Year']=wind_df['Year'].astype(int)
 
-solar_df=pd.read_csv('D:\Sustanability Project\solar_share_energy.csv')
+solar_df=pd.read_csv('solar_share_energy.csv')
 solar_df.drop('Code',axis=1,inplace=True)
 solar_df['Year']=solar_df['Year'].astype(int)
 solar_df.rename(columns={'Entity':'Country'},inplace=True)
 
 
-hydro_df=pd.read_csv('D:\Sustanability Project\hydro_share_energy.csv')
+hydro_df=pd.read_csv('hydro_share_energy.csv')
 hydro_df.drop('Code',axis=1,inplace=True)
 hydro_df['Year']=hydro_df['Year'].astype(int)
 hydro_df.rename(columns={'Entity':'Country'},inplace=True)
